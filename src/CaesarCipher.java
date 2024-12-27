@@ -5,7 +5,7 @@ public class CaesarCipher {
 
     public static String encrypt(String text, int shift) {
         StringBuilder result = new StringBuilder();
-        shift = shift % 26 + 26; // Для обработки отрицательных сдвигов
+        shift = shift % 26 + 26; 
 
         for (char character : text.toCharArray()) {
             if (Character.isLetter(character)) {
@@ -18,7 +18,7 @@ public class CaesarCipher {
     }
 
     public static String decrypt(String text, int shift) {
-        return encrypt(text, -shift); // Расшифровка - это шифрование с отрицательным сдвигом
+        return encrypt(text, -shift); 
     }
 
     public static void processFile(String inputFilePath, String outputFilePath, int shift, boolean encrypting) {
@@ -41,7 +41,7 @@ public class CaesarCipher {
         int mode = scanner.nextInt();
         System.out.println("Введите сдвиг (целое число):");
         int shift = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
 
         System.out.println("Введите путь к входному файлу:");
         String inputFilePath = scanner.nextLine();
